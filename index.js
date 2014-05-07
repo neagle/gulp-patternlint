@@ -44,7 +44,7 @@ var patternLintPlugin = function (rules) {
 		try {
 			rulesFile = fs.readFileSync('./.patternlintrc');
 		} catch (err) {
-			throw new Error('Pattern Lint: Please provide either a JS config file of rules or a rules object.');
+			throw new Error('gulp-patternlint: Please provide either a JS config file of rules or a rules object.');
 		}
 	}
 
@@ -53,7 +53,7 @@ var patternLintPlugin = function (rules) {
 			rules = JSON.parse(rulesFile);
 		}
 		catch (err) {
-			throw new Error('Pattern Lint: Error in rules JSON: ' + err);
+			throw new Error('gulp-patternlint: Error in rules JSON: ' + err);
 		}
 	}
 
@@ -180,7 +180,7 @@ patternLintPlugin.reporter = function (customReporter) {
 	}
 
 	if (typeof reporter === 'undefined') {
-		throw new Error('Invalid reporter');
+		throw new Error('gulp-patternlint: Invalid reporter');
 	}
 
 	return es.map(function (file, cb) {
@@ -200,7 +200,7 @@ patternLintPlugin.failReporter = function () {
 			return cb(null, file);
 		}
 
-		return cb(new gutil.PluginError('gulp-lint', 'Lint failed for ' + file.relative), file);
+		return cb(new gutil.PluginError('gulp-patternlint', 'Pattern Lint failed for ' + file.relative), file);
 	});
 };
 
