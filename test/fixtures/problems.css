@@ -1,0 +1,5 @@
+#myplugin {
+	background-image: url(http://placekitten.com/100/300/);
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+}

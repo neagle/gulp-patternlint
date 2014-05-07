@@ -1,0 +1,10 @@
+[
+	{
+		"message": "Any external assets need to be fetched using https://.",
+		"pattern": "http://"
+	},
+	{
+		"message": "Assets from the origin server should use SSL, with \"https://s.aolcdn.com\" instead of \"http://o.aolcdn.com\".",
+		"pattern": "o.aolcdn.com"
+	}
+]
