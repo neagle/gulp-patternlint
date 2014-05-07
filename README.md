@@ -90,7 +90,7 @@ file.patternlint.rules = {}; // The rules you passed to PatternLint
 
 ## Custom Reporters
 
-Custom reporter functions can be passed as `patternlint.reporter(reporterFunc)`. The reporter function will be called for each linted file and passed the file object as described above.
+Pattern Lint has a lovely default reporter that sends output to your gulp process with information about linting problems. But if you'd like to make your own, custom reporter functions can be passed as `patternlint.reporter(reporterFunc)`. The reporter function will be called for each linted file and passed the file object as described above.
 
 ```javascript
 var patternlint = require('gulp-patternlint');
