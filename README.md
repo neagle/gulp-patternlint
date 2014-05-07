@@ -97,9 +97,9 @@ var patternlint = require('gulp-patternlint');
 var gutil = require('gulp-util');
 
 var customReporter = function (file) {
-  gutil.log(gutil.colors.cyan(file.csslint.errorCount) + ' errors in ' + gutil.colors.magenta(file.path));
+  gutil.log(gutil.colors.cyan(file.patternlint.errorCount) + ' errors in ' + gutil.colors.magenta(file.path));
 
-  file.csslint.results.forEach(function (result) {
+  file.patternlint.results.forEach(function (result) {
     gutil.log(result.error.message + ' on line ' + result.error.line);
   });
 };
