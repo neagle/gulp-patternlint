@@ -113,7 +113,7 @@ gulp.task('lint', function () {
 
 ## Acknowledgements
 
-This plugin is almost a fork of @lazd's [gulp-csslint](https://github.com/lazd/gulp-csslint) plugin, which I used as a model to learn how to write a Gulp plugin.
+This plugin is almost a fork of [@lazd](https://github.com/lazd)'s [gulp-csslint](https://github.com/lazd/gulp-csslint) plugin, which I used as a model to learn how to write a Gulp plugin.
 
 [travis-url]: http://travis-ci.org/neagle/gulp-patternlint
 [travis-image]: https://secure.travis-ci.org/neagle/gulp-patternlint.png?branch=master
