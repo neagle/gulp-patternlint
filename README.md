@@ -104,10 +104,13 @@ var customReporter = function (file) {
 		 * The error object has these properties:
 		 * line: the line number of the error
 		 * col: the column number of the error
-		 * pre: an excerpt of the file that preceded the error, no longer than 25 characters
+		 * pre: an excerpt of the file that preceded the error,
+		   no longer than 25 characters
 		 * match: the text of the file that produced the error
-		 * post: an excerpt of the file that followed the error, no longer than 25 characters
-		 * message: the rule's message (ie, "Don't use the word irregardless. Because it's not a word.")
+		 * post: an excerpt of the file that followed the error,
+		   no longer than 25 characters
+		 * message: the rule's message (ie, "Don't use the word
+		   irregardless. Because it's not a word.")
 		 */
 		gutil.log(result.error.message + ' on line ' + result.error.line);
 	});
