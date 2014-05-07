@@ -97,17 +97,26 @@ var patternlint = require('gulp-patternlint');
 var gutil = require('gulp-util');
 
 var customReporter = function (file) {
-  gutil.log(gutil.colors.cyan(file.patternlint.errorCount) + ' errors in ' + gutil.colors.magenta(file.path));
+	gutil.log(gutil.colors.cyan(file.patternlint.errorCount) + ' errors in ' + gutil.colors.magenta(file.path));
 
-  file.patternlint.results.forEach(function (result) {
-    gutil.log(result.error.message + ' on line ' + result.error.line);
-  });
+	file.patternlint.results.forEach(function (result) {
+		/*
+		 * The error object has these properties:
+		 * line: the line number of the error
+		 * col: the column number of the error
+		 * pre: an excerpt of the file that preceded the error, no longer than 25 characters
+		 * match: the text of the file that produced the error
+		 * post: an excerpt of the file that followed the error, no longer than 25 characters
+		 * message: the rule's message (ie, "Don't use the word irregardless. Because it's not a word.")
+		 */
+		gutil.log(result.error.message + ' on line ' + result.error.line);
+	});
 };
 
 gulp.task('lint', function () {
-  gulp.files('lib/*.css')
-    .pipe(patternlint())
-    .pipe(patternlint.reporter(customReporter));
+	gulp.files('lib/*.css')
+		.pipe(patternlint())
+		.pipe(patternlint.reporter(customReporter));
 });
 ```
 
