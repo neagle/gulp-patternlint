@@ -6,5 +6,9 @@
 	{
 		"message": "Assets from the origin server should use SSL, with \"https://s.aolcdn.com\" instead of \"http://o.aolcdn.com\".",
 		"pattern": "o.aolcdn.com"
+	},
+	{
+		"message": "Searching for a regex without flags.",
+		"regexp": "http"
 	}
 ]

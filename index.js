@@ -79,7 +79,7 @@ var patternLintPlugin = function (rules) {
 					exp = new RegExp(rule.pattern, 'g');
 				} else if (rule.regexp) {
 					// Add user-specified flags
-					var flags = 'g' + (rule.flags) ? rule.flags: '';
+					var flags = 'g' + ((rule.flags) ? rule.flags: '');
 					// Remove any duplicate flags
 					flags = flags.replace(/(.)(?=\1){1}/g, '');
 
